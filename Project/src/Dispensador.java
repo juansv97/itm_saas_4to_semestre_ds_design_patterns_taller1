@@ -25,11 +25,11 @@ public class Dispensador implements IManejador {
             int restante = cantidad % denominacion;
 
             System.out.println("Dispensanso " + numEfectivo + "billete de $" + denominacion);
-            if (restante >= 0 && siguiHandler != null) {
+            if (restante >= 0 && SiguienteMnj != null) {
 
                 setSiguienteMnj.procesarTransaccion(restante);// pasamos el restante de la cantidad al siguiente manejador
             }  // si la cantidad es menor a la denominacion se pasa la siguiente manejador 
-         } else if (setSiguienteMnj != null) {
+         } else if (SiguienteMnj != null) {
 
            setSiguienteMnj.procesarTransaccion(cantidad);
 
