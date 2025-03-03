@@ -1,7 +1,7 @@
 
 public class Dispensador implements IManejador {
 
-    protected IManejador siguiHandler;//permite que cada manejador conozca quién es su sucesor en la cadena.
+    protected IManejador setSiguienteMnj;//permite que cada manejador conozca quién es su sucesor en la cadena.
     protected int denominacion;
 
     public Dispensador(int denominacion) {
@@ -10,9 +10,9 @@ public class Dispensador implements IManejador {
     }
 
     @Override
-    public void siguienteMnj(IManejador siguiHandler) {
+    public void setSiguienteMnj(IManejador setSiguienteMnj) {
 
-        this.siguiHandler = siguiHandler;
+        this.setSiguienteMnj = setSiguienteMnj;
 
     }// almacena el siguiente manejador en la cadena de responsabilidades
 
@@ -27,11 +27,11 @@ public class Dispensador implements IManejador {
             System.out.println("Dispensanso " + numEfectivo + "billete de $" + denominacion);
             if (restante >= 0 && siguiHandler != null) {
 
-                siguiHandler.procesarTransaccion(restante);// pasamos el restante de la cantidad al siguiente manejador
+                setSiguienteMnj.procesarTransaccion(restante);// pasamos el restante de la cantidad al siguiente manejador
             }  // si la cantidad es menor a la denominacion se pasa la siguiente manejador 
-         } else if (siguiHandler != null) {
+         } else if (setSiguienteMnj != null) {
 
-            siguiHandler.procesarTransaccion(cantidad);
+           setSiguienteMnj.procesarTransaccion(cantidad);
 
         }
 
