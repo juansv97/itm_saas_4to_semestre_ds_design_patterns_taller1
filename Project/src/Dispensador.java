@@ -1,7 +1,7 @@
 
 public class Dispensador implements IManejador {
 
-    protected IManejador setSiguienteMnj;//permite que cada manejador conozca quién es su sucesor en la cadena.
+    protected IManejador SiguienteMnj;//permite que cada manejador conozca quién es su sucesor en la cadena.
     protected int denominacion;
 
     public Dispensador(int denominacion) {
