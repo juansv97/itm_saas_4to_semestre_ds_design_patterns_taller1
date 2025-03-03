@@ -10,9 +10,9 @@ public class Dispensador implements IManejador {
     }
 
     @Override
-    public void setSiguienteMnj(IManejador setSiguienteMnj) {
+    public void setSiguienteMnj(IManejador SiguienteMnj) {
 
-        this.setSiguienteMnj = setSiguienteMnj;
+        this.SiguienteMnj = SiguienteMnj;
 
     }// almacena el siguiente manejador en la cadena de responsabilidades
 
