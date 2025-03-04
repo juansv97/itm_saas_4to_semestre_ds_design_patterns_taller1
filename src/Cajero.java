@@ -1,4 +1,4 @@
-public class App {
+public class Cajero {
     public static void main(String[] args) throws Exception {
 
         IManejador Dispensador100 = new Dispensador(100000);
